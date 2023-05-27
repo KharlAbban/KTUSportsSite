@@ -1,0 +1,20 @@
+body {
+  overflow-x: hidden;
+  background: #f3f3f3;
+  color: #555;
+}
+nav.navbar {
+  background: rgba(0, 0, 0, 0.8);
+}
+.carousel-item {
+  height: 70vh;
+  max-height: 80vh;
+}
+.carousel-item img {
+  height: inherit;
+  width: 100%;
+}
+#homeSearch:focus {
+  text-decoration: none;
+  text-transform: none;
+}
