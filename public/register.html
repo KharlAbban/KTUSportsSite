@@ -93,53 +93,85 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="col-sm-9 col-md-9 col-lg-10 mx-auto">
         <div class="card border-2 border-primary shadow rounded-3 my-5">
           <div class="card-body p-3 p-sm-5">
             <h5 class="card-title text-center mb-3 fw-light fs-2 text-decoration-underline">Registration Form</h5>
             <form>
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control border-1 border-primary-subtle" autofocus id="floatingName"
-                  placeholder="Alex Doe">
-                <label for="floatingName">Full Name</label>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control border-1 border-primary-subtle" autofocus id="floatingName"
+                      placeholder="Alex Doe">
+                    <label for="floatingName">Full Name</label>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control border-1 border-primary-subtle" id="floatingSId"
+                      placeholder="Student ID">
+                    <label for="floatingSId">Student ID Number</label>
+                  </div>
+                </div>
               </div>
-              <div class="form-floating mb-3">
-                <input type="email" class="form-control border-1 border-primary-subtle" id="floatingEmail"
-                  placeholder="name@example.com">
-                <label for="floatingEmail">Email address</label>
+              <div class="row">
+                <div class="col-lg-6">
+                  <select class="form-select mb-3 border-1 border-primary-subtle" id="formDept"
+                    aria-label="Select your department">
+                    <option>Choose your department</option>
+                    <option value="FAST">FAST</option>
+                    <option value="FBMS">FBMS</option>
+                    <option value="FHAS">FHAS</option>
+                    <option value="FOE">FOE</option>
+                  </select>
+                </div>
+                <div class="col-lg-6 order-1">
+                  <select class="form-select mb-3 border-1 border-primary-subtle" id="formDept"
+                    aria-label="Select your course">
+                    <option>Choose your course</option>
+                    <option value="FAST">Computer Science</option>
+                    <option value="FBMS">Networking</option>
+                    <option value="FHAS">Stats and Probability</option>
+                    <option value="FOE">Mechatronics</option>
+                  </select>
+                </div>
               </div>
-              <select class="form-select mb-3 border-1 border-primary-subtle" id="formDept" aria-label="Select your department">
-                <option>Choose your department</option>
-                <option value="FAST">FAST</option>
-                <option value="FBMS">FBMS</option>
-                <option value="FHAS">FHAS</option>
-                <option value="FOE">FOE</option>
-              </select>
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control border-1 border-primary-subtle" autofocus id="floatingCourse"
-                  placeholder="Alex Doe">
-                <label for="floatingCourse">Course/ Programme</label>
+              <div class="row">
+                <div class="col-lg-6">
+                  <select class="form-select mb-3 border-1 border-primary-subtle" id="formDept"
+                    aria-label="Select your level">
+                    <option>Select your level</option>
+                    <option value="1">Level 100</option>
+                    <option value="2">Level 200</option>
+                    <option value="3">Level 300</option>
+                    <option value="4">Level 400</option>
+                  </select>
+                </div>
+                <div class="col-lg-6">
+                  <select class="form-select mb-3 border-1 border-primary-subtle" aria-label="Select your sport">
+                    <option>Select your sport</option>
+                    <option value="soccer">&#x26BD; Soccer</option>
+                    <option value="volleyball">&#127952; Volleyball</option>
+                    <option value="basketball">&#x1F3C0; Basketball</option>
+                  </select>
+                </div>
               </div>
-              <select class="form-select mb-3 border-1 border-primary-subtle" id="formDept" aria-label="Select your level">
-                <option>Select your level</option>
-                <option value="1">Level 100</option>
-                <option value="2">Level 200</option>
-                <option value="3">Level 300</option>
-                <option value="4">Level 400</option>
-              </select>
-              <div class="form-floating mb-3">
-                <input type="password" class="form-control border-1 border-primary-subtle" id="floatingPassword"
-                  placeholder="Password">
-                <label for="floatingPassword">Password</label>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control border-1 border-primary-subtle" id="floatingPassword"
+                      placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control border-1 border-primary-subtle" id="floatingConfirm"
+                      placeholder="Confirm Password">
+                    <label for="floatingConfirm">Confirm Password</label>
+                  </div>
+                </div>
               </div>
-
-              <select class="form-select mb-3 border-1 border-primary-subtle" aria-label="Select your sport">
-                <option>Select your sport</option>
-                <option value="soccer">&#x26BD; Soccer</option>
-                <option value="volleyball">&#127952; Volleyball</option>
-                <option value="basketball">&#x1F3C0; Basketball</option>
-              </select>
-
               <div class="d-grid">
                 <button class="signInBtn text-white btn btn-login text-uppercase fw-bold"
                   type="submit">Register</button>
@@ -150,12 +182,20 @@
               </div>
             </form>
           </div>
+          <div class="card-footer text-center">
+            <div class="container-fluid text-center">
+              <p>&copy; Koforidua Technical University <span id="year"></span></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  
+  <script>
+    document.querySelector("#year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 
 </html>
