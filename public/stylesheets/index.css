@@ -4,7 +4,10 @@ body {
   color: #555;
 }
 nav.navbar {
-  background: rgba(0, 0, 0, 0.8);
+    background: linear-gradient(180deg, rgb(65,88,208), #0986ce);
+}
+footer {
+    background: rgb(65,88,208);
 }
 .carousel-item {
   height: 70vh;
