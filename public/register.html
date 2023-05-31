@@ -63,7 +63,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link signIn" aria-current="page" href="#">Sign In</a>
+              <a class="nav-link signIn" aria-current="page" href="login.html">Sign In</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">More</a>
@@ -86,150 +86,110 @@
           <div class="card border-2 border-primary shadow rounded-3 my-5">
             <div class="card-body p-3 p-sm-5">
               <h5 class="card-title text-center mb-3 fw-light fs-2 text-decoration-underline">Registration Form</h5>
-              <div class="container-fluid" id="registerDiv">
-                <form class="needs-validation" novalidate id="registerForm" action="index.html" method="GET">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="form-floating mb-3">
-                        <input type="text" class="form-control border-1 border-primary-subtle" autofocus
-                          id="floatingName" placeholder="Alex Doe" required>
-                        <label for="floatingName">Full Name</label>
-                        <div class="invalid-feedback">Please provide a name</div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-floating mb-3">
-                        <input type="text" class="form-control border-1 border-primary-subtle" id="floatingSId"
-                          placeholder="Student ID" required>
-                        <label for="floatingSId">Student ID Number</label>
-                        <div class="invalid-feedback">Enter your ID number!</div>
-                      </div>
+              <form class="needs-validation" novalidate id="registerForm" action="index.html" method="GET">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control border-1 border-primary-subtle" autofocus id="floatingName"
+                        placeholder="Alex Doe" required>
+                      <label for="floatingName">Full Name</label>
+                      <div class="invalid-feedback">Please provide a name</div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <select class="form-select mb-3 border-1 border-primary-subtle" id="formDept"
-                        aria-label="Select your department" required>
-                        <option>Choose your department</option>
-                        <option value="FAST">FAST</option>
-                        <option value="FBMS">FBMS</option>
-                        <option value="FHAS">FHAS</option>
-                        <option value="FOE">FOE</option>
-                      </select>
-                      <div class="invalid-feedback">Select your department</div>
-                    </div>
-                    <div class="col-lg-6 order-1">
-                      <select class="form-select mb-3 border-1 border-primary-subtle" id="formCourse"
-                        aria-label="Select your course" required>
-                        <option>Choose your course</option>
-                        <option value="FAST">Computer Science</option>
-                        <option value="FBMS">Networking</option>
-                        <option value="FHAS">Stats and Probability</option>
-                        <option value="FOE">Mechatronics</option>
-                      </select>
-                      <div class="invalid-feedback">Choose your course!</div>
+                  <div class="col-lg-6">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control border-1 border-primary-subtle" id="floatingSId"
+                        placeholder="Student ID" required>
+                      <label for="floatingSId">Student ID Number</label>
+                      <div class="invalid-feedback">Enter your ID number!</div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <select class="form-select mb-3 border-1 border-primary-subtle" id="formLevel"
-                        aria-label="Select your level" required>
-                        <option>Select your level</option>
-                        <option value="1">Level 100</option>
-                        <option value="2">Level 200</option>
-                        <option value="3">Level 300</option>
-                        <option value="4">Level 400</option>
-                      </select>
-                      <div class="invalid-feedback">Select your level!</div>
-                    </div>
-                    <div class="col-lg-6">
-                      <select class="form-select mb-3 border-1 border-primary-subtle" aria-label="Select your sport"
-                        required>
-                        <option>Select your sport</option>
-                        <option value="soccer">&#x26BD; Soccer</option>
-                        <option value="volleyball">&#127952; Volleyball</option>
-                        <option value="basketball">&#x1F3C0; Basketball</option>
-                        <option value="volleyball">&#127952; Handball</option>
-                      </select>
-                      <div class="invalid-feedback">Choose a sport!</div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="form-floating mb-3">
-                        <input type="password" class="form-control border-1 border-primary-subtle" id="floatingPassword"
-                          placeholder="Password" required>
-                        <label for="floatingPassword">Password</label>
-                        <div class="invalid-feedback pwd-feedback">Please provide a password!</div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-floating mb-3">
-                        <input type="password" class="form-control border-1 border-primary-subtle" id="floatingConfirm"
-                          placeholder="Confirm Password" required>
-                        <label for="floatingConfirm">Confirm Password</label>
-                        <div class="invalid-feedback pwdConfirm-feedback">Type in the previous password!</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="form-check mb-2">
-                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                        <label class="form-check-label" for="invalidCheck">Agree to <a href=""
-                            class="text-decoration-none">terms and conditions</a></label>
-                        <div class="invalid-feedback">You must agree before submitting.</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="d-grid">
-                    <button class="signInBtn text-white btn btn-login text-uppercase fw-bold"
-                      type="submit">Register</button>
-                  </div>
-                  <hr class="my-4">
-                  <div class="d-grid">
-                    <p>Already have an account? <a href="" class="signIn">Sign In</a></p>
-                  </div>
-                </form>
-              </div>
-              <div id="signInDiv" class="d-none shadow container-fluid row">
-                <div class="col-lg-6 d-none d-lg-block bg-image"></div>
-                <div class="col-lg-6 py-3">
-                  <form class="needs-validation" novalidate id="signInForm" action="index.html" method="GET">
-                    <div class="row">
-                      <div class="col">
-                        <div class="form-floating mb-3">
-                          <input type="text" class="form-control border-1 border-primary-subtle" id="signInSId"
-                            placeholder="Student ID" required>
-                          <label for="floatingSId">Student ID Number</label>
-                          <div class="invalid-feedback">Enter your ID number!</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="form-floating mb-3">
-                          <input type="password" class="form-control border-1 border-primary-subtle" id="signInPassword"
-                            placeholder="Password" required>
-                          <label for="floatingPassword">Password</label>
-                          <div class="invalid-feedback pwd-feedback">Please provide a password!</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="d-grid">
-                      <p><a href="" id="register">Forgot password</a></p>
-                    </div>
-                    <div class="d-grid mx-auto col-lg-6 mb-3">
-                      <button class="signInBtn text-white btn btn-login text-uppercase fw-bold" type="submit">
-                        Sign In
-                      </button>
-                    </div>
-                    <div class="d-grid">
-                      <p>Don't have an account? <a href="" id="register">Register here</a></p>
-                    </div>
-                  </form>
                 </div>
-              </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <select class="form-select mb-3 border-1 border-primary-subtle" id="formDept"
+                      aria-label="Select your department" required>
+                      <option>Choose your department</option>
+                      <option value="FAST">FAST</option>
+                      <option value="FBMS">FBMS</option>
+                      <option value="FHAS">FHAS</option>
+                      <option value="FOE">FOE</option>
+                    </select>
+                    <div class="invalid-feedback">Select your department</div>
+                  </div>
+                  <div class="col-lg-6 order-1">
+                    <select class="form-select mb-3 border-1 border-primary-subtle" id="formCourse"
+                      aria-label="Select your course" required>
+                      <option>Choose your course</option>
+                      <option value="FAST">Computer Science</option>
+                      <option value="FBMS">Networking</option>
+                      <option value="FHAS">Stats and Probability</option>
+                      <option value="FOE">Mechatronics</option>
+                    </select>
+                    <div class="invalid-feedback">Choose your course!</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <select class="form-select mb-3 border-1 border-primary-subtle" id="formLevel"
+                      aria-label="Select your level" required>
+                      <option>Select your level</option>
+                      <option value="1">Level 100</option>
+                      <option value="2">Level 200</option>
+                      <option value="3">Level 300</option>
+                      <option value="4">Level 400</option>
+                    </select>
+                    <div class="invalid-feedback">Select your level!</div>
+                  </div>
+                  <div class="col-lg-6">
+                    <select class="form-select mb-3 border-1 border-primary-subtle" aria-label="Select your sport"
+                      required>
+                      <option>Select your sport</option>
+                      <option value="soccer">&#x26BD; Soccer</option>
+                      <option value="volleyball">&#127952; Volleyball</option>
+                      <option value="basketball">&#x1F3C0; Basketball</option>
+                      <option value="volleyball">&#127952; Handball</option>
+                    </select>
+                    <div class="invalid-feedback">Choose a sport!</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control border-1 border-primary-subtle" id="floatingPassword"
+                        placeholder="Password" required>
+                      <label for="floatingPassword">Password</label>
+                      <div class="invalid-feedback pwd-feedback">Please provide a password!</div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control border-1 border-primary-subtle" id="floatingConfirm"
+                        placeholder="Confirm Password" required>
+                      <label for="floatingConfirm">Confirm Password</label>
+                      <div class="invalid-feedback pwdConfirm-feedback">Type in the previous password!</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-check mb-2">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                      <label class="form-check-label" for="invalidCheck">Agree to <a href=""
+                          class="text-decoration-none">terms and conditions</a></label>
+                      <div class="invalid-feedback">You must agree before submitting.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-grid">
+                  <button class="signInBtn text-white btn btn-login text-uppercase fw-bold"
+                    type="submit">Register</button>
+                </div>
+                <hr class="my-4">
+                <div class="d-grid">
+                  <p>Already have an account? <a href="login.html" class="signIn">Sign In</a></p>
+                </div>
+              </form>
             </div>
             <div class="card-footer text-center">
               <div class="container-fluid text-center">
