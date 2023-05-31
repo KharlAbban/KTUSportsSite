@@ -10,6 +10,10 @@ body {
     background: url("../media/ktu_logo.png") no-repeat 50%;
     background-size: cover;
   }
+  .forgot-bg-image {
+    background: url("../media/forgot-password.jpg") no-repeat;
+    background-size: cover;
+  }
   .btn-login {
     font-size: 0.9rem;
     letter-spacing: 0.05rem;
