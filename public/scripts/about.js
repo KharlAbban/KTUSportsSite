@@ -64,3 +64,13 @@ function purchaseClicked() {
   }
   updateCartTotal()
 }
+
+//MAp Items
+var tileUrl = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+var tileAttribution = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+//LEAFLET MAP
+var map = L.map('map').setView([6.064566399999999,-0.2628136], 11);
+const marker = L.marker([6.064566399999999,-0.2628136]).addTo(map);
+L.tileLayer(tileUrl, {
+    attribution: tileAttribution
+}).addTo(map);
