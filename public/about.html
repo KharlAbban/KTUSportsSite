@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="author" content="hackHeroes">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/jpg" href="media/ktu_logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <link rel="stylesheet" href="stylesheets/about.css">
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
+  <script src="scripts/register.js" defer></script>
   <script src="scripts/about.js" defer></script>
   <title>About KTU Sports</title>
 </head>
+
 <body>
   <section id="navbar" class="">
     <nav class="navbar navbar-expand-lg navbar-dark text-white p-1" aria-label="About KTU Sports Navbar">
@@ -35,14 +41,15 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Soccer</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Team</a></li>
+                <li><a class="dropdown-item" href="sports/soccer/soccer_main.html">Team</a></li>
                 <li><a class="dropdown-item" href="#">Highlights</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Volleyball</a>
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                aria-expanded="false">Volleyball</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Team</a></li>
+                <li><a class="dropdown-item" href="sports/volleyball/volley_main.html">Team</a></li>
                 <li><a class="dropdown-item" href="#">Highlights</a></li>
               </ul>
             </li>
@@ -50,7 +57,7 @@
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                 aria-expanded="false">Basketball</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Team</a></li>
+                <li><a class="dropdown-item" href="sports/basketball/bball_main.html">Team</a></li>
                 <li><a class="dropdown-item" href="#">Highlights</a></li>
               </ul>
             </li>
@@ -60,9 +67,8 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">More</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Upcoming events</a></li>
-                <li><a class="dropdown-item" href="#">News</a></li>
-                <li><a class="dropdown-item" href="#">Support</a></li>
+                <li><a class="dropdown-item" href="login.html">Sign In</a></li>
+                <li><a class="dropdown-item" href="news/news_main.html">News</a></li>
               </ul>
             </li>
           </ul>
@@ -73,16 +79,116 @@
       </div>
     </nav>
   </section>
-  <div class="" style="height: 80vh;"></div>
+  <button class="btn btn-primary" id="addToCart">Add To Cart</button>
+
+  <section id="cart" class="">
+    <div class="container mt-5 py-3 border bg-dark">
+      <h3 class="text-center">CART</h3>
+      <div class="row cart-header text-center border-bottom">
+        <div class="col-lg-6">ITEM</div>
+        <div class="col-lg-2">PRICE</div>
+        <div class="col-lg-4">QUANTITY</div>
+      </div>
+      <div class="container-fluid mt-2" id="cart-items">
+        <!-- <div class="row text-center border-bottom mb-2 pb-2 align-items-center">
+          <div class="col-lg-6 item-details">
+            <img src="media/ktu_logo.png" alt="" height="50" class="item-image">
+            <span class="item-title ml-2">Item Name</span>
+          </div>
+          <div class="col-lg-2 item-price">$12.00</div>
+          <div class="col-lg-4 item-quantity">
+            <input type="number" name="quantity" id="" value="1" class="item-quantity-input">
+            <button type="button" class="btn btn-danger">Remove Item</button>
+          </div>
+        </div> -->
+      </div>
+      <div class="row container">
+        <div class="col">
+          <div class="float-end" id="">
+            <strong>Total </strong> $<span id="totalPrice">0</span>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col">
+          <button type="button" class="btn btn-primary" id="buyBtn">Purchase</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="support">
+    <div class="container my-2">
+      <div class="position-relative p-3 p-lg-5 text-center text-muted bg-primary-subtle border border-dashed rounded-5">
+        <h1 class="text-body-emphasis text-decoration-underline">Support Us</h1>
+        <p class="col-lg-6 mx-auto mb-4">
+          As an up-and-coming platform for all of KTU's sports needs, it is essential that we provide not just good
+          content,
+          but <strong>quality content</strong>.
+          It is with this mindset that we appeal to everyone who can to help promote this platform - both in kind and in
+          cash.
+          We thank you very much for your cooperation. <br>
+          - KTU Sports
+        </p>
+        <button class="btn btn-outline-dark px-5 mb-5" type="button">Give your support</button>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer py-3">
-    <div class="container text-center text-white">References
+    <div class="container text-center text-white">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 footer-nav-section">
+          <img src="media/ktu_logo_white_text.png" class="img-fluid border-bottom" alt="">
+          <h3 class="mt-2">References</h3>
+          <ul class="nav nav-pills flex-column mb-auto">
+            <li>
+              <a href="#" class="nav-link text-white"><i class="fa-solid fa-thin fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white"><i class="fa-solid fa-dashboard"></i> Dashboard</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white"><i class="fa-solid fa-home"></i> Orders</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white"><i class="fa-solid fa-home"></i> Products</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white"><i class="fa-solid fa-home"></i> Customers</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-8 col-md-6 contact-us-section">
+          <h3>Contact Us</h3>
+          <form action="#" method="get" id="contactForm" class="text-start needs-validation" novalidate role="form">
+            <div class="row">
+              <div class="col form-group">
+                <label for="name" class="fw-bold">Your Name: </label>
+                <input type="text" name="name" id="" required="" class="form-control">
+                <div class="invalid-feedback text-warning">Please provide a name!</div>
+              </div>
+              <div class="col form-group">
+                <label for="email" class="fw-bold">Your Email: </label>
+                <input type="email" name="email" required="" id="" class="form-control">
+                <div class="invalid-feedback text-warning">Please provide an email!</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="msg" class="fw-bold">Message: </label>
+              <textarea name="msg" class="form-control" required="" id="" rows="5"></textarea>
+              <div class="invalid-feedback text-warning">NO message!</div>
+            </div>
+            <div class="text-center">
+              <input type="submit" value="Send Message" class="btn w-100 btn-dark mt-3 text-decoration-none">
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr class="my-3">
       <p>&copy; Koforidua Technical University <span id="year"></span></p>
     </div>
   </footer>
-
-  <script>
-    document.querySelector("#year").textContent = new Date().getFullYear();
-  </script>
 </body>
+
 </html>

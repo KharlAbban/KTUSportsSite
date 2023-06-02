@@ -1,11 +1,12 @@
 body {
   overflow-x: hidden;
-  background: url("../media/about-wallpaper.jpeg") -25%;
+  background: url("../media/about-wallpaper.jpeg") -25% fixed;
   background-size: cover;
+  color: #fff;
 }
 nav.navbar {
   background: linear-gradient(180deg, rgb(65,88,208), #0986ce);
 }
 footer {
-  background: rgb(65,88,208);
+  background: rgb(39, 55, 133);
 }

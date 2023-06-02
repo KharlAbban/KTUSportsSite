@@ -9,15 +9,3 @@ nav.navbar {
 footer {
   background: rgb(39, 55, 133);
 }
-.carousel-item {
-  height: 70vh;
-  max-height: 80vh;
-}
-.carousel-item img {
-  height: inherit;
-  width: 100%;
-}
-#homeSearch:focus {
-  text-decoration: none;
-  text-transform: none;
-}
